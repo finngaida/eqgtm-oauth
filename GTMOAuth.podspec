@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.public_header_files ='OAuth_v1.0/**/*.h', 'OAuth_v2.0/**/*.h'
-  s.source_files = 'GTMHTTPFetcher/*.{h,m}', 'OAuth_v1.0/**/*.{h,m}', 'OAuth_v2.0/**/*.{h,m}'
+  s.source_files = 'TouchBase/*.{h,m}', 'GTMHTTPFetcher/*.{h,m}', 'OAuth_v1.0/**/*.{h,m}', 'OAuth_v2.0/**/*.{h,m}'
   s.private_header_files = 'GTMHTTPFetcher/*.h'
   s.ios.frameworks = 'Security', 'SystemConfiguration'
 end
