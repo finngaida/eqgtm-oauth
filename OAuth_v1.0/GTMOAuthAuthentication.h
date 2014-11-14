@@ -19,8 +19,6 @@
   #import "GTLDefines.h"
 #endif
 
-#import "GTMHTTPFetcher.h"
-
 #undef _EXTERN
 #undef _INITIALIZE_AS
 #ifdef GTMOAUTHAUTHENTICATION_DEFINE_GLOBALS
@@ -68,23 +66,23 @@ _EXTERN NSString* const kGTMOAuthDialogDismissed _INITIALIZE_AS(@"kGTMOAuthDialo
 _EXTERN NSString* const kGTMOAuthSignatureMethodRSA_SHA1  _INITIALIZE_AS(@"RSA-SHA1");
 #endif
 
-@interface GTMOAuthAuthentication : NSObject <GTMFetcherAuthorizationProtocol> {
+@interface GTMOAuthAuthentication : NSObject {
 @private
   // paramValues_ contains the parameters used in requests and responses
   NSMutableDictionary *paramValues_;
-  
+
   NSString *realm_;
   NSString *privateKey_;
   NSString *timestamp_; // set for testing only
   NSString *nonce_;     // set for testing only
-  
+
   // flag indicating if the token in paramValues is a request token or an
   // access token
   BOOL hasAccessToken_;
-  
+
   // flag indicating if authorizeRequest: adds a header or parameters
   BOOL shouldUseParamsToAuthorize_;
-  
+
   id userData_;
 }
 
