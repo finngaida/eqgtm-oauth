@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EQGTMOAuth'
-  s.version          = '1.1.3'
+  s.version          = '1.1.4'
   s.license          = 'Apache'
   s.summary          = 'Stripped down OAuth engine for iOS.'
   s.homepage         = 'https://github.com/equinux/eqgtm-oauth'
@@ -12,6 +12,11 @@ Pod::Spec.new do |s|
   s.ios.public_header_files = 'OAuth_v1.0/*.h'
   s.ios.source_files = 'OAuth_v1.0/*.{h,m}'
   s.ios.frameworks = 'Security', 'SystemConfiguration'
+
+  s.watchos.deployment_target = '3.0'
+  s.watchos.public_header_files = 'OAuth_v1.0/*.h'
+  s.watchos.source_files = 'OAuth_v1.0/*.{h,m}'
+  s.watchos.frameworks = 'Security'
 
   s.tvos.deployment_target = '9.0'
   s.tvos.public_header_files = 'OAuth_v1.0/*.h'
