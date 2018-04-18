@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EQGTMOAuth-watchOS'
-  s.version          = '0.0.1'
+  s.version          = '1.1.5'
   s.license          = 'Apache'
   s.summary          = 'Stripped down OAuth engine for iOS.'
   s.homepage         = 'https://github.com/equinux/eqgtm-oauth'
